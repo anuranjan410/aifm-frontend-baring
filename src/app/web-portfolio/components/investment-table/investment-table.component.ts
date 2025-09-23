@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-investment-table',
-  templateUrl: './investment-table.component.html',
-  styleUrls: ['./investment-table.component.scss']
+  templateUrl: './investment-table.component.html'
 })
 export class InvestmentTableComponent {
   companies = [

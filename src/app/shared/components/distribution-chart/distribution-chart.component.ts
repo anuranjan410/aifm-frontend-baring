@@ -8,8 +8,7 @@ interface IndustryData {
 
 @Component({
   selector: 'app-distribution-chart',
-  templateUrl: './distribution-chart.component.html',
-  styleUrls: ['./distribution-chart.component.scss']
+  templateUrl: './distribution-chart.component.html'
 })
 export class DistributionChartComponent implements OnInit {
   @Input() title: string = 'Distribution by Industries';

@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-documents-grid',
-  templateUrl: './documents-grid.component.html',
-  styleUrls: ['./documents-grid.component.scss']
+  templateUrl: './documents-grid.component.html'
 })
 export class DocumentsGridComponent {
   documents = [
