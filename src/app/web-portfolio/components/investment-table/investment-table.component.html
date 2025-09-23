@@ -1,0 +1,37 @@
+<section class="investment-table">
+  <div class="table-container">
+    <div class="table-header">
+      <div class="table-title">Investment Portfolio</div>
+      <div class="table-actions">
+        <button class="btn btn-dark">
+          <span>Sort by</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="table-row" *ngFor="let c of companies">
+      <div class="table-cell table-cell-primary">
+        <div class="table-company-logo"></div>
+        <div class="table-company">
+          <div class="table-company-name">{{ c.name }}</div>
+        </div>
+      </div>
+
+      <div class="table-metrics">
+        <div class="table-cell table-metric">{{ c.industry }}</div>
+        <div class="table-cell table-metric">{{ c.investment }}</div>
+        <div class="table-cell table-metric">{{ c.value }}</div>
+        <div class="table-cell table-metric">{{ c.irr }}</div>
+        <div class="table-cell table-metric">{{ c.moic }}</div>
+        <div class="table-cell table-metric">
+          <div class="table-progress">
+            <div class="table-progress-text">{{ c.weight }}</div>
+            <div class="table-progress-bar">
+              <div class="table-progress-fill" [style.width]="c.weight"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
