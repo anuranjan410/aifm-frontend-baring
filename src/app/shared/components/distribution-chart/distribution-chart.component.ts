@@ -12,6 +12,7 @@ interface IndustryData {
   standalone: true,
   imports: [CommonModule],
   templateUrl: './distribution-chart.component.html',
+  styleUrls: ['./distribution-chart.component.scss'],
 })
 export class DistributionChartComponent implements OnInit {
   @Input() title: string = 'Distribution by Industries';

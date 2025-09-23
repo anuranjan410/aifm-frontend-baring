@@ -1,32 +1,72 @@
-<section class="insights">
-  <h3 class="section-title">Latest Insights</h3>
-  <div class="insights-grid">
-    <article class="card">
-      <img
-        src="https://api.builder.io/api/v1/image/assets/TEMP/3936939ad970f7a9b459a32d0e26039e89d24225?width=620"
-        alt="Insight cover"
-      />
-      <div class="card-body">
-        <h4 class="insight-title">Future of Digital Transformation in Enterprise</h4>
+<section class="latest-insights">
+  <div class="container">
+    <div class="insights-header">
+      <h3 class="insights-title">
+        Latest Insights
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_1_216)">
+            <path d="M11 19.25C15.5563 19.25 19.25 15.5563 19.25 11C19.25 6.44365 15.5563 2.75 11 2.75C6.44365 2.75 2.75 6.44365 2.75 11C2.75 15.5563 6.44365 19.25 11 19.25Z" stroke="black" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10.3125 10.3125C10.4948 10.3125 10.6697 10.3849 10.7986 10.5139C10.9276 10.6428 11 10.8177 11 11V14.4375C11 14.6198 11.0724 14.7947 11.2014 14.9236C11.3303 15.0526 11.5052 15.125 11.6875 15.125" stroke="black" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10.6562 8.25C11.2258 8.25 11.6875 7.78829 11.6875 7.21875C11.6875 6.64921 11.2258 6.1875 10.6562 6.1875C10.0867 6.1875 9.625 6.64921 9.625 7.21875C9.625 7.78829 10.0867 8.25 10.6562 8.25Z" fill="black"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_1_216">
+              <rect width="22" height="22" fill="white"/>
+            </clipPath>
+          </defs>
+        </svg>
+      </h3>
+
+      <div class="insights-actions">
+        <button class="summarize-btn">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5.79335 11.8062L2.00595 10.4106C1.90151 10.3721 1.81141 10.3024 1.74764 10.2111C1.68387 10.1198 1.65 10.0112 1.65 9.8998C1.65 9.7884 1.68387 9.6798 1.74764 9.5885C1.81141 9.4972 1.90151 9.4275 2.00595 9.389L5.79335 8.19338L7.18897 4.40595C7.22752 4.30151 7.29719 4.21141 7.3885 4.14764C7.47981 4.08387 7.5884 4.05 7.6998 4.05C7.8112 4.05 7.91979 4.08387 8.0111 4.14764C8.10241 4.21141 8.17208 4.30151 8.21063 4.40595L9.60625 8.19338L13.3937 9.389C13.4981 9.4275 13.5882 9.4972 13.652 9.5885C13.7158 9.6798 13.7496 9.7884 13.7496 9.8998C13.7496 10.0112 13.7158 10.1198 13.652 10.2111C13.5882 10.3024 13.4981 10.3721 13.3937 10.4106L9.60625 11.8062L8.21063 15.5937C8.17208 15.6981 8.10241 15.7882 8.0111 15.852C7.91979 15.9158 7.8112 15.9496 7.6998 15.9496C7.5884 15.9496 7.47981 15.9158 7.3885 15.852C7.29719 15.7882 7.22752 15.6981 7.18897 15.5937L5.79335 11.8062Z" stroke="currentColor" stroke-width="0.825" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Summarize
+        </button>
+        <button class="view-all-btn" (click)="onViewAllInsights()">
+          All Insights
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
       </div>
-    </article>
-    <article class="card">
-      <img
-        src="https://api.builder.io/api/v1/image/assets/TEMP/3936939ad970f7a9b459a32d0e26039e89d24225?width=620"
-        alt="Insight cover"
-      />
-      <div class="card-body">
-        <h4 class="insight-title">Achieving sustainable growth: Make sustainability the focus</h4>
-      </div>
-    </article>
-    <article class="card">
-      <img
-        src="https://api.builder.io/api/v1/image/assets/TEMP/3936939ad970f7a9b459a32d0e26039e89d24225?width=620"
-        alt="Insight cover"
-      />
-      <div class="card-body">
-        <h4 class="insight-title">An attractive time to get more aggressive: Baring India</h4>
-      </div>
-    </article>
+    </div>
+
+    <div class="insights-grid">
+      <article class="insight-card" *ngFor="let insight of insights" (click)="onReadInsight(insight)">
+        <div class="insight-image">
+          <img [src]="insight.image" [alt]="insight.title" />
+          <div class="insight-badge">{{ insight.category }}</div>
+          <div class="insight-actions">
+            <button class="insight-action" title="Expand">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 5L14 2M14 2H11M14 2V5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M5 11L2 14M2 14H5M2 14V11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+
+            <button class="insight-action" title="Share">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 5.33333C13.1046 5.33333 14 4.43809 14 3.33333C14 2.22857 13.1046 1.33333 12 1.33333C10.8954 1.33333 10 2.22857 10 3.33333C10 4.43809 10.8954 5.33333 12 5.33333Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4 10C5.10457 10 6 9.10457 6 8C6 6.89543 5.10457 6 4 6C2.89543 6 2 6.89543 2 8C2 9.10457 2.89543 10 4 10Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 14.6667C13.1046 14.6667 14 13.7714 14 12.6667C14 11.5619 13.1046 10.6667 12 10.6667C10.8954 10.6667 10 11.5619 10 12.6667C10 13.7714 10.8954 14.6667 12 14.6667Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M5.72667 8.94L10.28 11.7267" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M5.72667 7.06L10.28 4.27333" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="insight-content">
+          <h4 class="insight-title">{{ insight.title }}</h4>
+
+          <div class="insight-meta">
+            <span class="insight-date">{{ insight.date }}</span>
+            <span class="insight-duration">{{ insight.readTime }}</span>
+          </div>
+        </div>
+      </article>
+    </div>
   </div>
 </section>

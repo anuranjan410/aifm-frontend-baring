@@ -30,6 +30,7 @@ import { FooterComponent } from '../shared/components/footer/footer.component';
     FooterComponent,
   ],
   templateUrl: './web-dashboard.component.html',
+  styleUrls: ['./web-dashboard.component.scss']
 })
 export class WebDashboardComponent implements OnInit {
   constructor() {}

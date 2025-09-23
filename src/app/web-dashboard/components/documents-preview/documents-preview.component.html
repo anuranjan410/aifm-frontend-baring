@@ -1,15 +1,104 @@
-<section class="documents-preview">
-  <h3 class="section-title">Latest Documents</h3>
-  <div class="documents-grid">
-    <div class="document-card" *ngFor="let doc of [1, 2, 3, 4]">
-      <div class="document-card-title">Quarterly Update Report</div>
-      <div class="document-card-meta">Issued on 23 July 2025</div>
-      <div class="document-card-actions">
-        <div class="document-card-action" title="View">
-          <span class="icon-square" aria-hidden="true"></span>
-        </div>
-        <div class="document-card-action" title="Download">
-          <span class="icon-square" aria-hidden="true"></span>
+<section class="latest-documents">
+  <div class="container">
+    <div class="section-header">
+      <h3 class="section-title">Latest Documents</h3>
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_1_216)">
+          <path d="M11 19.25C15.5563 19.25 19.25 15.5563 19.25 11C19.25 6.44365 15.5563 2.75 11 2.75C6.44365 2.75 2.75 6.44365 2.75 11C2.75 15.5563 6.44365 19.25 11 19.25Z" stroke="black" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M10.3125 10.3125C10.4948 10.3125 10.6697 10.3849 10.7986 10.5139C10.9276 10.6428 11 10.8177 11 11V14.4375C11 14.6198 11.0724 14.7947 11.2014 14.9236C11.3303 15.0526 11.5052 15.125 11.6875 15.125" stroke="black" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M10.6562 8.25C11.2258 8.25 11.6875 7.78829 11.6875 7.21875C11.6875 6.64921 11.2258 6.1875 10.6562 6.1875C10.0867 6.1875 9.625 6.64921 9.625 7.21875C9.625 7.78829 10.0867 8.25 10.6562 8.25Z" fill="black"/>
+        </g>
+        <defs>
+          <clipPath id="clip0_1_216">
+            <rect width="22" height="22" fill="white"/>
+          </clipPath>
+        </defs>
+      </svg>
+      
+      <button class="view-all-btn" (click)="onViewAllDocuments()">
+        View all documents
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="documents-grid-preview">
+      <div class="document-card-preview" *ngFor="let doc of documents" [style.background-image]="'url(' + doc.bgImage + ')'">
+        <div class="document-preview-content">
+          <div class="document-preview-info">
+            <h4 class="document-preview-title">{{ doc.title }}</h4>
+            <p class="document-preview-date">{{ doc.date }}</p>
+          </div>
+
+          <div class="document-preview-footer">
+            <div class="document-file-info">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1_1715)">
+                  <path d="M18.5625 13.0625H15.8125V17.875" stroke="white" stroke-width="1.03125" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M17.875 15.8125H15.8125" stroke="white" stroke-width="1.03125" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M4.125 16.5H5.5C5.95584 16.5 6.39301 16.3189 6.71534 15.9966C7.03767 15.6743 7.21875 15.2371 7.21875 14.7812C7.21875 14.3254 7.03767 13.8882 6.71534 13.5659C6.39301 13.2436 5.95584 13.0625 5.5 13.0625H4.125V17.875" stroke="white" stroke-width="1.03125" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M9.625 13.0625V17.875H11C11.6382 17.875 12.2502 17.6215 12.7015 17.1702C13.1527 16.719 13.4062 16.1069 13.4062 15.4688C13.4062 14.8306 13.1527 14.2185 12.7015 13.7673C12.2502 13.316 11.6382 13.0625 11 13.0625H9.625Z" stroke="white" stroke-width="1.03125" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M4.125 9.625V3.4375C4.125 3.25516 4.19743 3.0803 4.32636 2.95136C4.4553 2.82243 4.63016 2.75 4.8125 2.75H13.0625L17.875 7.5625V9.625" stroke="white" stroke-width="1.03125" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M13.0625 2.75V7.5625H17.875" stroke="white" stroke-width="1.03125" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_1715">
+                    <rect width="22" height="22" fill="white"/>
+                  </clipPath>
+                </defs>
+              </svg>
+              <span class="file-size">{{ doc.size }}</span>
+            </div>
+
+            <div class="document-preview-actions">
+              <button class="document-preview-action" (click)="onViewDocument(doc)" title="View Document">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_1_1692)">
+                    <path d="M11 4.8125C4.125 4.8125 1.375 11 1.375 11C1.375 11 4.125 17.1875 11 17.1875C17.875 17.1875 20.625 11 20.625 11C20.625 11 17.875 4.8125 11 4.8125Z" stroke="#122334" stroke-width="1.03125" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M11 14.4375C12.8985 14.4375 14.4375 12.8985 14.4375 11C14.4375 9.10152 12.8985 7.5625 11 7.5625C9.10152 7.5625 7.5625 9.10152 7.5625 11C7.5625 12.8985 9.10152 14.4375 11 14.4375Z" stroke="#122334" stroke-width="1.03125" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1_1692">
+                      <rect width="22" height="22" fill="white"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+
+              <button class="document-preview-action" (click)="onDownloadDocument(doc)" title="Download Document">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_1_1699)">
+                    <path d="M11 12.375V2.75" stroke="#122334" stroke-width="1.03125" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M18.5625 12.375V17.875H3.4375V12.375" stroke="#122334" stroke-width="1.03125" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14.4375 8.9375L11 12.375L7.5625 8.9375" stroke="#122334" stroke-width="1.03125" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1_1699">
+                      <rect width="22" height="22" fill="white"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+
+              <button class="document-preview-action" title="AI Summary">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_1_1707)">
+                    <path d="M7.24174 14.7578L2.50744 13.0133C2.3769 12.9651 2.26426 12.8781 2.18471 12.7639C2.10515 12.6497 2.0625 12.5139 2.0625 12.3748C2.0625 12.2356 2.10515 12.0998 2.18471 11.9857C2.26426 11.8715 2.3769 11.7845 2.50744 11.7363L7.24174 9.99173L8.98627 5.25744C9.03445 5.1269 9.12149 5.01426 9.23566 4.93471C9.34982 4.85515 9.48563 4.8125 9.62478 4.8125C9.76393 4.8125 9.89974 4.85515 10.0139 4.93471C10.1281 5.01426 10.2151 5.1269 10.2633 5.25744L12.0078 9.99173L16.7421 11.7363C16.8727 11.7845 16.9853 11.8715 17.0649 11.9857C17.1444 12.0998 17.1871 12.2356 17.1871 12.3748C17.1871 12.5139 17.1444 12.6497 17.0649 12.7639C16.9853 12.8781 16.8727 12.9651 16.7421 13.0133L12.0078 14.7578L10.2633 19.4921C10.2151 19.6227 10.1281 19.7353 10.0139 19.8149C9.89974 19.8944 9.76393 19.9371 9.62478 19.9371C9.48563 19.9371 9.34982 19.8944 9.23566 19.8149C9.12149 19.7353 9.03445 19.6227 8.98627 19.4921L7.24174 14.7578Z" stroke="#122334" stroke-width="1.03125" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15.125 1.375V5.5" stroke="#122334" stroke-width="1.03125" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M19.25 6.1875V8.9375" stroke="#122334" stroke-width="1.03125" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13.0625 3.4375H17.1875" stroke="#122334" stroke-width="1.03125" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M17.875 7.5625H20.625" stroke="#122334" stroke-width="1.03125" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1_1707">
+                      <rect width="22" height="22" fill="white"/>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

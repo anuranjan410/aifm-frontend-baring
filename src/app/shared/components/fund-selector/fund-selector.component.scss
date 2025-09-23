@@ -1,0 +1,199 @@
+.fund-selector-wrapper {
+  background-color: #181818;
+  min-height: 268px;
+  padding: 20px 0;
+  position: relative;
+
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 70px;
+    position: relative;
+  }
+
+  .fund-selector-content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    position: relative;
+  }
+
+  .account-info {
+    position: absolute;
+    top: -40px;
+    right: 0;
+
+    .account-id {
+      color: #000;
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1.5;
+      letter-spacing: -0.198px;
+    }
+  }
+
+  .fund-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 60px;
+
+    .inception-info {
+      .inception-date {
+        color: #fff;
+        font-family: 'Instrument Sans', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1;
+        opacity: 0.2;
+      }
+    }
+
+    .fund-main {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      .fund-dropdown {
+        .fund-dropdown-trigger {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          background: none;
+          border: none;
+          color: #fff;
+          cursor: pointer;
+          padding: 0;
+          margin-left: 2px;
+
+          .fund-dropdown-label {
+            font-family: 'Instrument Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.5;
+            letter-spacing: -0.14px;
+            text-transform: capitalize;
+          }
+
+          svg {
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+          }
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+
+      .fund-title {
+        color: #fff;
+        font-family: 'Victor Serif Trial', serif;
+        font-size: 44px;
+        font-weight: 500;
+        line-height: normal;
+        margin: 0;
+        max-width: 624px;
+      }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 1400px) {
+  .fund-selector-wrapper {
+    .container {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .fund-selector-wrapper {
+    min-height: 220px;
+
+    .fund-selection {
+      .fund-main {
+        .fund-title {
+          font-size: 36px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .fund-selector-wrapper {
+    min-height: 180px;
+    padding: 16px 0;
+
+    .container {
+      padding: 0 20px;
+    }
+
+    .account-info {
+      position: static;
+      order: -1;
+      margin-bottom: 16px;
+
+      .account-id {
+        font-size: 16px;
+        color: #fff;
+        opacity: 0.6;
+      }
+    }
+
+    .fund-selection {
+      padding-top: 0;
+
+      .fund-main {
+        .fund-title {
+          font-size: 28px;
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .fund-selector-wrapper {
+    min-height: 160px;
+
+    .fund-selection {
+      .inception-info {
+        .inception-date {
+          font-size: 12px;
+        }
+      }
+
+      .fund-main {
+        .fund-dropdown {
+          .fund-dropdown-trigger {
+            .fund-dropdown-label {
+              font-size: 12px;
+            }
+
+            svg {
+              width: 12px;
+              height: 12px;
+            }
+          }
+        }
+
+        .fund-title {
+          font-size: 24px;
+        }
+      }
+    }
+
+    .account-info {
+      .account-id {
+        font-size: 14px;
+      }
+    }
+  }
+}

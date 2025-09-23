@@ -4,6 +4,7 @@ import { Component, Input } from '@angular/core';
   selector: 'app-fund-selector',
   standalone: true,
   templateUrl: './fund-selector.component.html',
+  styleUrls: ['./fund-selector.component.scss']
 })
 export class FundSelectorComponent {
   @Input() selectedFund: string = 'Baring Private Equity India AIF 2';

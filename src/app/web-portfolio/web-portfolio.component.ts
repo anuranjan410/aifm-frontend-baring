@@ -24,5 +24,6 @@ import { FooterComponent } from '../shared/components/footer/footer.component';
     FooterComponent,
   ],
   templateUrl: './web-portfolio.component.html',
+  styleUrls: ['./web-portfolio.component.scss'],
 })
 export class WebPortfolioComponent {}

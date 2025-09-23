@@ -4,5 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-performance',
   standalone: true,
   templateUrl: './performance.component.html',
+  styleUrls: ['./performance.component.scss']
 })
 export class PerformanceComponent {}

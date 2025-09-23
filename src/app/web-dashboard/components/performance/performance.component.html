@@ -1,20 +1,93 @@
-<section class="performance">
-  <h3 class="section-title">Fund Performance</h3>
-  <div class="card">
-    <div class="card-body">
-      <div class="placeholder-chart">Chart area</div>
+<section class="fund-performance">
+  <div class="container">
+    <div class="performance-header">
+      <h3 class="performance-title">Fund Performance</h3>
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_1_216)">
+          <path d="M11 19.25C15.5563 19.25 19.25 15.5563 19.25 11C19.25 6.44365 15.5563 2.75 11 2.75C6.44365 2.75 2.75 6.44365 2.75 11C2.75 15.5563 6.44365 19.25 11 19.25Z" stroke="black" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M10.3125 10.3125C10.4948 10.3125 10.6697 10.3849 10.7986 10.5139C10.9276 10.6428 11 10.8177 11 11V14.4375C11 14.6198 11.0724 14.7947 11.2014 14.9236C11.3303 15.0526 11.5052 15.125 11.6875 15.125" stroke="black" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M10.6562 8.25C11.2258 8.25 11.6875 7.78829 11.6875 7.21875C11.6875 6.64921 11.2258 6.1875 10.6562 6.1875C10.0867 6.1875 9.625 6.64921 9.625 7.21875C7.625 7.78829 10.0867 8.25 10.6562 8.25Z" fill="black"/>
+        </g>
+        <defs>
+          <clipPath id="clip0_1_216">
+            <rect width="22" height="22" fill="white"/>
+          </clipPath>
+        </defs>
+      </svg>
+      
+      <div class="performance-filters">
+        <button class="filter-btn active">3Y</button>
+        <button class="filter-btn">5Y</button>
+        <button class="filter-btn">10Y</button>
+        <button class="filter-btn">Max</button>
+      </div>
+    </div>
+
+    <div class="performance-content">
+      <!-- Chart Area -->
+      <div class="performance-chart">
+        <div class="chart-container">
+          <div class="chart-placeholder">
+            <!-- This would be replaced with actual Highcharts implementation -->
+            <div class="chart-lines">
+              <svg width="100%" height="320" viewBox="0 0 800 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Chart grid lines (vertical) -->
+                <line x1="100" y1="40" x2="100" y2="280" stroke="#E5E5E5" stroke-width="1"/>
+                <line x1="200" y1="40" x2="200" y2="280" stroke="#E5E5E5" stroke-width="1"/>
+                <line x1="300" y1="40" x2="300" y2="280" stroke="#E5E5E5" stroke-width="1"/>
+                <line x1="400" y1="40" x2="400" y2="280" stroke="#E5E5E5" stroke-width="1"/>
+                <line x1="500" y1="40" x2="500" y2="280" stroke="#E5E5E5" stroke-width="1"/>
+                <line x1="600" y1="40" x2="600" y2="280" stroke="#E5E5E5" stroke-width="1"/>
+                <line x1="700" y1="40" x2="700" y2="280" stroke="#E5E5E5" stroke-width="1"/>
+                
+                <!-- Chart data lines -->
+                <polyline points="50,240 100,220 150,200 200,180 250,160 300,140 350,120 400,100 450,90 500,85 550,80 600,75 650,70 700,65 750,60" 
+                          fill="none" stroke="#122334" stroke-width="2"/>
+                <polyline points="50,260 100,250 150,240 200,230 250,220 300,210 350,200 400,190 450,185 500,180 550,175 600,170 650,165 700,160 750,155" 
+                          fill="none" stroke="#FF6B6B" stroke-width="2"/>
+                
+                <!-- Y-axis labels -->
+                <text x="30" y="65" font-family="Arial" font-size="12" fill="#666">1.05 Cr</text>
+                <text x="30" y="105" font-family="Arial" font-size="12" fill="#666">1.04 Cr</text>
+                <text x="30" y="145" font-family="Arial" font-size="12" fill="#666">1.03 Cr</text>
+                <text x="30" y="185" font-family="Arial" font-size="12" fill="#666">1.02 Cr</text>
+                <text x="30" y="225" font-family="Arial" font-size="12" fill="#666">1.01 Cr</text>
+                <text x="30" y="265" font-family="Arial" font-size="12" fill="#666">1.00 Cr</text>
+                
+                <!-- X-axis labels -->
+                <text x="100" y="300" font-family="Arial" font-size="12" fill="#666">2023</text>
+                <text x="200" y="300" font-family="Arial" font-size="12" fill="#666">2024</text>
+                <text x="300" y="300" font-family="Arial" font-size="12" fill="#666">2025</text>
+                <text x="400" y="300" font-family="Arial" font-size="12" fill="#666">2026</text>
+                <text x="500" y="300" font-family="Arial" font-size="12" fill="#666">2027</text>
+                <text x="600" y="300" font-family="Arial" font-size="12" fill="#666">2028</text>
+                <text x="700" y="300" font-family="Arial" font-size="12" fill="#666">2029</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Performance Stats -->
       <div class="performance-stats">
-        <div class="stat-item">
-          <div class="stat-label">Growth</div>
-          <div class="stat-value">0.69 Cr</div>
+        <div class="stat-legend">
+          <div class="legend-item">
+            <div class="legend-color growth"></div>
+            <span class="legend-label">Growth</span>
+          </div>
+          <div class="stat-value-large">0.69 Cr</div>
+          <div class="stat-date">Sep 30, 2024</div>
+          <div class="stat-details">Growth (DGC, LBC)</div>
+          <div class="stat-details">Gross MOIC: 1.22x</div>
+          <div class="stat-details">Return on Invested Capital (ROIC)</div>
         </div>
-        <div class="stat-item">
-          <div class="stat-label">Return on Invested Capital</div>
-          <div class="stat-value">1.30x</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-label">Drawdowns</div>
-          <div class="stat-value">0.65 Cr</div>
+        
+        <div class="stat-legend">
+          <div class="legend-item">
+            <div class="legend-color drawdowns"></div>
+            <span class="legend-label">Drawdowns</span>
+          </div>
+          <div class="stat-value-large">0.65 Cr</div>
         </div>
       </div>
     </div>

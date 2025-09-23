@@ -2,14 +2,16 @@
   <div class="distribution-header">
     <div class="distribution-title-wrapper">
       <h3 class="distribution-title">{{ title }}</h3>
-      <span class="icon-square" aria-hidden="true"></span>
+      <div class="icon-square" aria-hidden="true"></div>
     </div>
     <div class="distribution-controls" *ngIf="showFilters">
       <button class="btn-icon" (click)="onFilterClick()">
-        <span class="icon-square" aria-hidden="true"></span><span class="btn-text">Filter</span>
+        <div class="icon-square" aria-hidden="true"></div>
+        <span class="btn-text">Filter</span>
       </button>
     </div>
   </div>
+  
   <div class="distribution-content">
     <div class="chart-container">
       <div class="pie-chart">
@@ -22,7 +24,6 @@
             <div class="legend-color" [style.background-color]="item.color"></div>
             <span class="legend-label">{{ item.name }}</span>
             <span class="legend-percentage">{{ item.percentage }}%</span>
-            <span class="icon-square" aria-hidden="true"></span>
           </div>
         </div>
       </div>
