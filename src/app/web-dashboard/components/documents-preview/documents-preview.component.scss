@@ -1,0 +1,23 @@
+.documents-preview {
+  .section-title {
+    color: var(--text-primary);
+    font-family: var(--font-primary);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .documents-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--spacing-lg);
+  }
+
+  @media (max-width: 1024px) {
+    .documents-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 600px) {
+    .documents-grid { grid-template-columns: 1fr; }
+  }
+}
