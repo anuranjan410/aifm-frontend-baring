@@ -1,0 +1,113 @@
+.fund-selector {
+  padding: var(--spacing-lg) 0 var(--spacing-xxl);
+  
+  .fund-selector-header {
+    position: relative;
+  }
+  
+  .fund-selector-content {
+    position: relative;
+  }
+  
+  .fund-selector-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-lg);
+    
+    .inception-date {
+      color: var(--white);
+      font-family: var(--font-secondary);
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1;
+      opacity: 0.2;
+    }
+    
+    .account-id {
+      color: var(--text-primary);
+      font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1.5;
+      letter-spacing: -0.198px;
+    }
+  }
+  
+  .fund-selector-main {
+    width: 624px;
+    height: 86px;
+    
+    .fund-dropdown {
+      position: relative;
+      margin-bottom: var(--spacing-lg);
+      
+      .fund-dropdown-trigger {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        
+        .fund-dropdown-label {
+          color: var(--white);
+          font-family: var(--font-secondary);
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 1.5;
+          letter-spacing: -0.14px;
+          text-transform: capitalize;
+        }
+        
+        svg {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+    
+    .fund-title {
+      color: var(--white);
+      font-family: var(--font-primary);
+      font-size: 44px;
+      font-weight: 500;
+      line-height: normal;
+      margin: 0;
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .fund-selector {
+    .fund-selector-meta {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--spacing-sm);
+    }
+    
+    .fund-selector-main {
+      width: 100%;
+      
+      .fund-title {
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .fund-selector {
+    .fund-title {
+      font-size: 24px;
+      line-height: 1.2;
+    }
+  }
+}
