@@ -14,13 +14,12 @@ const routes = [
 ];
 
 @NgModule({
-  declarations: [
-    WebDocumentsComponent,
-    DocumentsGridComponent
-  ],
+  declarations: [],
   imports: [
     CommonModule,
     SharedModule,
+    WebDocumentsComponent,
+    DocumentsGridComponent,
     RouterModule.forChild(routes)
   ]
 })
