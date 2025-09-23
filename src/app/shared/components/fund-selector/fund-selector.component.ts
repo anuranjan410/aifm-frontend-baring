@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-fund-selector',
+  standalone: true,
   templateUrl: './fund-selector.component.html'
 })
 export class FundSelectorComponent {
