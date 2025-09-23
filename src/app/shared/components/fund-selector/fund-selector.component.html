@@ -6,17 +6,13 @@
           <span class="inception-date">{{ inceptionDate }}</span>
           <span class="account-id">{{ accountId }}</span>
         </div>
-        
         <div class="fund-selector-main">
           <div class="fund-dropdown">
-            <button class="fund-dropdown-trigger">
+            <button class="fund-dropdown-trigger" aria-label="Select fund">
               <span class="fund-dropdown-label">Select fund</span>
-              <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.375 5.75L7 10.125L2.625 5.75" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+              <span class="caret-down" aria-hidden="true"></span>
             </button>
           </div>
-          
           <h1 class="fund-title">{{ selectedFund }}</h1>
         </div>
       </div>
