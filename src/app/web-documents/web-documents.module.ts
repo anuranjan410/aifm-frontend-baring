@@ -9,8 +9,8 @@ import { DocumentsGridComponent } from './components/documents-grid/documents-gr
 const routes = [
   {
     path: '',
-    component: WebDocumentsComponent
-  }
+    component: WebDocumentsComponent,
+  },
 ];
 
 @NgModule({
@@ -20,7 +20,7 @@ const routes = [
     SharedModule,
     WebDocumentsComponent,
     DocumentsGridComponent,
-    RouterModule.forChild(routes)
-  ]
+    RouterModule.forChild(routes),
+  ],
 })
-export class WebDocumentsModule { }
+export class WebDocumentsModule {}

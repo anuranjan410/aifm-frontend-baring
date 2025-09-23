@@ -3,11 +3,22 @@
     <div class="newsletter-badge">
       <span class="newsletter-badge-text">Newsletter</span>
     </div>
-    <h2 class="newsletter-title">Stay in the know with our newsletter covering the latest news and insights.</h2>
+    <h2 class="newsletter-title">
+      Stay in the know with our newsletter covering the latest news and insights.
+    </h2>
     <form class="newsletter-form" (ngSubmit)="onSubmit()">
       <div class="newsletter-input-group">
-        <input type="email" class="newsletter-input" placeholder="Email address" [(ngModel)]="email" name="email" required />
-        <button type="submit" class="newsletter-submit" aria-label="Submit"><span class="caret-right" aria-hidden="true"></span></button>
+        <input
+          type="email"
+          class="newsletter-input"
+          placeholder="Email address"
+          [(ngModel)]="email"
+          name="email"
+          required
+        />
+        <button type="submit" class="newsletter-submit" aria-label="Submit">
+          <span class="caret-right" aria-hidden="true"></span>
+        </button>
       </div>
     </form>
   </div>

@@ -5,12 +5,12 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-newsletter',
   standalone: true,
   imports: [FormsModule],
-  templateUrl: './newsletter.component.html'
+  templateUrl: './newsletter.component.html',
 })
 export class NewsletterComponent {
   email: string = '';
 
-  constructor() { }
+  constructor() {}
 
   onSubmit() {
     if (this.email) {

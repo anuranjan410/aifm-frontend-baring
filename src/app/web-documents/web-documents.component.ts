@@ -17,8 +17,8 @@ import { FooterComponent } from '../shared/components/footer/footer.component';
     FundSelectorComponent,
     DocumentsGridComponent,
     NewsletterComponent,
-    FooterComponent
+    FooterComponent,
   ],
-  templateUrl: './web-documents.component.html'
+  templateUrl: './web-documents.component.html',
 })
 export class WebDocumentsComponent {}

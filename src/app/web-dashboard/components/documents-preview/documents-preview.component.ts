@@ -5,6 +5,6 @@ import { CommonModule } from '@angular/common';
   selector: 'app-documents-preview',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './documents-preview.component.html'
+  templateUrl: './documents-preview.component.html',
 })
 export class DocumentsPreviewComponent {}

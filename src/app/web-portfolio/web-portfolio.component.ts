@@ -21,8 +21,8 @@ import { FooterComponent } from '../shared/components/footer/footer.component';
     InvestmentTableComponent,
     DistributionChartComponent,
     NewsletterComponent,
-    FooterComponent
+    FooterComponent,
   ],
-  templateUrl: './web-portfolio.component.html'
+  templateUrl: './web-portfolio.component.html',
 })
 export class WebPortfolioComponent {}

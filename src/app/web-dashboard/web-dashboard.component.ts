@@ -27,15 +27,12 @@ import { FooterComponent } from '../shared/components/footer/footer.component';
     DocumentsPreviewComponent,
     InsightsComponent,
     NewsletterComponent,
-    FooterComponent
+    FooterComponent,
   ],
-  templateUrl: './web-dashboard.component.html'
+  templateUrl: './web-dashboard.component.html',
 })
 export class WebDashboardComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

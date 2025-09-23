@@ -19,14 +19,14 @@ import { DistributionChartComponent } from './components/distribution-chart/dist
     FooterComponent,
     NewsletterComponent,
     FundSelectorComponent,
-    DistributionChartComponent
+    DistributionChartComponent,
   ],
   exports: [
     NavbarComponent,
     FooterComponent,
     NewsletterComponent,
     FundSelectorComponent,
-    DistributionChartComponent
-  ]
+    DistributionChartComponent,
+  ],
 })
-export class SharedModule { }
+export class SharedModule {}

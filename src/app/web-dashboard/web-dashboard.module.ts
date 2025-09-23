@@ -13,8 +13,8 @@ import { InsightsComponent } from './components/insights/insights.component';
 const routes = [
   {
     path: '',
-    component: WebDashboardComponent
-  }
+    component: WebDashboardComponent,
+  },
 ];
 
 @NgModule({
@@ -28,7 +28,7 @@ const routes = [
     OnlineSeminarComponent,
     DocumentsPreviewComponent,
     InsightsComponent,
-    RouterModule.forChild(routes)
-  ]
+    RouterModule.forChild(routes),
+  ],
 })
-export class WebDashboardModule { }
+export class WebDashboardModule {}

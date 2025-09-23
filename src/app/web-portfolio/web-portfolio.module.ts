@@ -10,8 +10,8 @@ import { InvestmentTableComponent } from './components/investment-table/investme
 const routes = [
   {
     path: '',
-    component: WebPortfolioComponent
-  }
+    component: WebPortfolioComponent,
+  },
 ];
 
 @NgModule({
@@ -22,7 +22,7 @@ const routes = [
     WebPortfolioComponent,
     PortfolioOverviewComponent,
     InvestmentTableComponent,
-    RouterModule.forChild(routes)
-  ]
+    RouterModule.forChild(routes),
+  ],
 })
-export class WebPortfolioModule { }
+export class WebPortfolioModule {}
