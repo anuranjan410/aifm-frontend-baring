@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 interface IndustryData {
   name: string;
@@ -8,6 +9,8 @@ interface IndustryData {
 
 @Component({
   selector: 'app-distribution-chart',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './distribution-chart.component.html'
 })
 export class DistributionChartComponent implements OnInit {
