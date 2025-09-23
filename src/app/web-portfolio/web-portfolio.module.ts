@@ -15,14 +15,13 @@ const routes = [
 ];
 
 @NgModule({
-  declarations: [
-    WebPortfolioComponent,
-    PortfolioOverviewComponent,
-    InvestmentTableComponent
-  ],
+  declarations: [],
   imports: [
     CommonModule,
     SharedModule,
+    WebPortfolioComponent,
+    PortfolioOverviewComponent,
+    InvestmentTableComponent,
     RouterModule.forChild(routes)
   ]
 })
