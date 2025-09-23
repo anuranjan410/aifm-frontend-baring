@@ -1,0 +1,25 @@
+<div class="web-documents">
+  <app-navbar></app-navbar>
+  <app-fund-selector></app-fund-selector>
+
+  <main class="documents-content bg-light">
+    <div class="container">
+      <section class="documents-header">
+        <h3 class="section-title">Documents and Reports</h3>
+        <div class="documents-filters d-flex gap-md">
+          <div class="search-input" style="width: 605px;">
+            <input type="text" placeholder="Search by document, type or date" />
+          </div>
+          <button class="btn btn-secondary">Document Type</button>
+          <button class="btn btn-secondary">Date Range</button>
+          <a class="btn btn-light" href="#">Reset</a>
+        </div>
+      </section>
+
+      <app-documents-grid></app-documents-grid>
+    </div>
+  </main>
+
+  <app-newsletter></app-newsletter>
+  <app-footer></app-footer>
+</div>
