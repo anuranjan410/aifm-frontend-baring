@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-documents-grid',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './documents-grid.component.html'
 })
 export class DocumentsGridComponent {
