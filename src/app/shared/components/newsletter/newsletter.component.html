@@ -1,0 +1,30 @@
+<section class="newsletter-section">
+  <div class="container">
+    <div class="newsletter-badge">
+      <span class="newsletter-badge-text">Newsletter</span>
+    </div>
+    
+    <h2 class="newsletter-title">
+      Stay in the know with our newsletter covering 
+      the latest news and insights.
+    </h2>
+    
+    <form class="newsletter-form" (ngSubmit)="onSubmit()">
+      <div class="newsletter-input-group">
+        <input 
+          type="email" 
+          class="newsletter-input" 
+          placeholder="Email address"
+          [(ngModel)]="email"
+          name="email"
+          required
+        />
+        <button type="submit" class="newsletter-submit">
+          <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.64062 4.35938L15.7788 11.4975L8.64062 18.6357" stroke="white" stroke-width="1.22368" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
