@@ -10,17 +10,16 @@ import { FundSelectorComponent } from './components/fund-selector/fund-selector.
 import { DistributionChartComponent } from './components/distribution-chart/distribution-chart.component';
 
 @NgModule({
-  declarations: [
+  declarations: [],
+  imports: [
+    CommonModule,
+    RouterModule,
+    FormsModule,
     NavbarComponent,
     FooterComponent,
     NewsletterComponent,
     FundSelectorComponent,
     DistributionChartComponent
-  ],
-  imports: [
-    CommonModule,
-    RouterModule,
-    FormsModule
   ],
   exports: [
     NavbarComponent,
