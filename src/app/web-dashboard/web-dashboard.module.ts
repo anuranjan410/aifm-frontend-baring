@@ -18,17 +18,16 @@ const routes = [
 ];
 
 @NgModule({
-  declarations: [
+  declarations: [],
+  imports: [
+    CommonModule,
+    SharedModule,
     WebDashboardComponent,
     OverviewComponent,
     PerformanceComponent,
     OnlineSeminarComponent,
     DocumentsPreviewComponent,
-    InsightsComponent
-  ],
-  imports: [
-    CommonModule,
-    SharedModule,
+    InsightsComponent,
     RouterModule.forChild(routes)
   ]
 })
