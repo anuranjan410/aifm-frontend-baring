@@ -1,8 +1,10 @@
 import { Component, Input } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-fund-selector',
   standalone: true,
+  imports: [RouterModule],
   templateUrl: './fund-selector.component.html',
   styleUrls: ['./fund-selector.component.scss']
 })
