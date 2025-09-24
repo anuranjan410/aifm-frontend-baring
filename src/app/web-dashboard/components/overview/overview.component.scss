@@ -11,7 +11,7 @@
     display: flex;
     align-items: flex-end;
     gap: 8px;
-    margin-bottom: 37px;
+    // margin-bottom: 37px;
 
     .overview-title {
       color: #000;
@@ -206,8 +206,6 @@
     }
 
     .overview-header {
-      margin-bottom: 28px;
-
       .overview-title {
         font-size: 20px;
         line-height: 20px;
@@ -301,8 +299,6 @@
     }
 
     .overview-header {
-      margin-bottom: 24px;
-
       .overview-title {
         font-size: 18px;
       }
@@ -364,4 +360,8 @@
       }
     }
   }
+}
+.border-right{
+  border-right: 1px solid #CBCBCB;
+  padding-right: 14px;
 }
