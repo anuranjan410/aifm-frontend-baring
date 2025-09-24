@@ -14,25 +14,29 @@ export class DocumentsPreviewComponent {
       title: 'Drawdown Receipt',
       date: 'Issued on 23 July 2025',
       size: '14 KB',
-      bgImage: 'https://api.builder.io/api/v1/image/assets/TEMP/be9ca3232984139ab8074fa047ab507acc3a62fb?width=620'
+      bgImage: 'https://api.builder.io/api/v1/image/assets/TEMP/be9ca3232984139ab8074fa047ab507acc3a62fb?width=620',
+      type: 'default'
     },
     {
       title: 'Statement of Account',
       date: 'Issued on 23 July 2025',
       size: '14 KB',
-      bgImage: 'https://api.builder.io/api/v1/image/assets/TEMP/be9ca3232984139ab8074fa047ab507acc3a62fb?width=620'
+      bgImage: 'https://api.builder.io/api/v1/image/assets/TEMP/be9ca3232984139ab8074fa047ab507acc3a62fb?width=620',
+      type: 'default'
     },
     {
       title: 'Quarterly Update Report',
       date: 'Issued on 23 July 2025',
       size: '14 KB',
-      bgImage: 'https://api.builder.io/api/v1/image/assets/TEMP/7e4df20ed3436c041c1beeb4d7c9d2a08d7fea6b?width=620'
+      bgImage: 'https://api.builder.io/api/v1/image/assets/TEMP/3936939ad970f7a9b459a32d0e26039e89d24225?width=620',
+      type: 'report'
     },
     {
       title: 'Income Statement',
       date: 'Issued on 23 July 2025',
       size: '14 KB',
-      bgImage: 'https://api.builder.io/api/v1/image/assets/TEMP/be9ca3232984139ab8074fa047ab507acc3a62fb?width=620'
+      bgImage: 'https://api.builder.io/api/v1/image/assets/TEMP/be9ca3232984139ab8074fa047ab507acc3a62fb?width=620',
+      type: 'default'
     }
   ];
 
