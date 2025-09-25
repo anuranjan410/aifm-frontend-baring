@@ -1,51 +1,45 @@
 .investment-table {
-  padding: 20px 0;
   background-color: #f3f5f7;
+  padding: 20px 0;
+  width: 100%;
 
-  .container {
+  .container-fluid {
     max-width: 1300px;
-    margin: 0 auto;
     padding: 0 70px;
+    margin: 0 auto;
+
+    @media (max-width: 1200px) {
+      padding: 0 40px;
+    }
+
+    @media (max-width: 768px) {
+      padding: 0 20px;
+    }
+
+    @media (max-width: 480px) {
+      padding: 0 12px;
+    }
   }
 
+  // Header Styles
   .investment-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 28px;
-
     .investment-title {
-      display: flex;
-      align-items: center;
-      gap: 8px;
       color: #000;
-      font-family: 'Victor Serif Trial', serif;
+      font-family: 'Victor Serif Trial', -apple-system, Roboto, Helvetica, sans-serif;
       font-size: 24px;
       font-weight: 500;
       line-height: 1;
       text-transform: capitalize;
-      margin: 0;
 
-      h3 {
-        margin: 0;
-        font-size: inherit;
-        font-weight: inherit;
-        font-family: inherit;
-        color: inherit;
-      }
-
-      svg {
-        width: 22px;
-        height: 22px;
-        flex-shrink: 0;
+      @media (max-width: 768px) {
+        font-size: 20px;
       }
     }
 
     .investment-sort {
-      display: flex;
-      align-items: center;
       background-color: #122334;
-      border-radius: 0;
+      border: none;
+      border-radius: 2px;
       padding: 0;
       height: 36px;
 
@@ -53,7 +47,6 @@
         width: 36px;
         height: 36px;
         background-color: #122334;
-        border-radius: 0;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -66,7 +59,7 @@
 
       .sort-label {
         color: #fff;
-        font-family: 'Instrument Sans', sans-serif;
+        font-family: 'Instrument Sans', -apple-system, Roboto, Helvetica, sans-serif;
         font-size: 16px;
         font-weight: 400;
         line-height: 1.05;
@@ -77,33 +70,44 @@
         align-items: center;
         background-color: #122334;
       }
+
+      &:hover {
+        background-color: #1a3a4f;
+
+        .sort-icon, .sort-label {
+          background-color: #1a3a4f;
+        }
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 0.2rem rgba(18, 35, 52, 0.25);
+      }
     }
+  }
+
+  // Portfolio Summary Styles
+  .portfolio-summary-container {
+    width: 100%;
   }
 
   .portfolio-summary {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 20px 0;
-    margin-bottom: 20px;
-    background-color: #f3f5f7;
     height: 102px;
+    padding: 20px 0;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f3f5f7;
 
     .summary-item {
       display: flex;
       flex-direction: column;
+      align-items: flex-start;
       gap: 10px;
-      text-align: left;
       flex: 1;
-      max-width: 200px;
 
       .summary-label {
-        display: flex;
-        align-items: center;
-        gap: 6px;
         color: #555;
-        font-family: 'Instrument Sans', sans-serif;
+        font-family: 'Instrument Sans', -apple-system, Roboto, Helvetica, sans-serif;
         font-size: 14px;
         font-weight: 400;
         line-height: 1;
@@ -117,263 +121,21 @@
 
       .summary-value {
         color: #000;
-        font-family: 'Test Tiempos Text', serif;
+        font-family: 'Test Tiempos Text', -apple-system, Roboto, Helvetica, sans-serif;
         font-size: 30px;
         font-weight: 400;
         line-height: 1.27;
       }
     }
-  }
 
-  .investment-data {
-    background-color: #f3f5f7;
-    border-radius: 0;
-    overflow: visible;
-
-    .table-header-row {
-      display: flex;
-      align-items: center;
-      gap: 162px;
-      padding: 0;
-      background-color: transparent;
-      border-bottom: none;
-      margin-bottom: 8px;
-
-      .table-header-cell {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        color: #313131;
-        font-family: 'Instrument Sans', sans-serif;
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 1.5;
-
-        &.company-header {
-          width: 215px;
-        }
-
-        &:not(.company-header) {
-          width: 86px;
-        }
-
-        svg {
-          width: 16px;
-          height: 16px;
-          flex-shrink: 0;
-        }
-      }
-
-      .company-header + .table-header-cell {
-        margin-left: 70px;
-      }
-    }
-
-    .company-row {
-      display: flex;
-      align-items: center;
-      gap: 57px;
-      padding: 14px 26px;
-      background-color: #e7ebee;
-      margin-bottom: 0;
-      min-height: 89px;
-
-      .company-cell {
-        display: flex;
-        align-items: center;
-        gap: 11px;
-
-        .company-logo {
-          width: 61px;
-          height: 61px;
-          background-color: #122c3f;
-          border-radius: 0;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-shrink: 0;
-
-          img {
-            max-width: 42px;
-            max-height: 42px;
-            object-fit: contain;
-          }
-        }
-
-        .company-info {
-          width: 224px;
-          min-width: 0;
-
-          .company-name {
-            color: #000;
-            font-family: 'Victor Serif Trial', serif;
-            font-size: 20px;
-            font-weight: 500;
-            line-height: 1.5;
-            max-width: 222px;
-            word-wrap: break-word;
-          }
-        }
-      }
-
-      .company-data {
-        display: flex;
-        align-items: center;
-        gap: 70px;
-        flex: 1;
-
-        .data-cell {
-          color: #000;
-          font-family: 'Instrument Sans', sans-serif;
-          font-size: 16px;
-          font-weight: 400;
-          line-height: 1.5;
-          width: 86px;
-
-          &.weight-cell {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 6px;
-            width: 86px;
-
-            .weight-text {
-              color: #000;
-              font-family: 'Instrument Sans', sans-serif;
-              font-size: 16px;
-              font-weight: 400;
-              line-height: 1.1;
-            }
-
-            .weight-progress {
-              width: 86px;
-              height: 13px;
-
-              .weight-progress-bg {
-                width: 100%;
-                height: 100%;
-                background-color: #d0d3d6;
-                opacity: 0.9;
-                position: relative;
-                border-radius: 0;
-
-                .weight-progress-fill {
-                  height: 100%;
-                  background-color: #122c3f;
-                  opacity: 0.9;
-                  border-radius: 0;
-                  transition: width 0.3s ease;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-// Responsive Design
-@media (max-width: 1200px) {
-  .investment-table {
-    .container {
-      padding: 0 40px;
-    }
-
-    .investment-data {
-      .table-header-row {
-        gap: 80px;
-        flex-wrap: wrap;
-      }
-
-      .company-row {
-        gap: 40px;
-        flex-wrap: wrap;
-        padding: 12px 20px;
-
-        .company-cell {
-          .company-logo {
-            width: 50px;
-            height: 50px;
-
-            img {
-              max-width: 30px;
-              max-height: 30px;
-            }
-          }
-
-          .company-info {
-            width: 180px;
-
-            .company-name {
-              font-size: 18px;
-            }
-          }
-        }
-
-        .company-data {
-          gap: 40px;
-          flex-wrap: wrap;
-
-          .data-cell {
-            width: 70px;
-
-            &.weight-cell {
-              width: 70px;
-
-              .weight-progress {
-                width: 70px;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .portfolio-summary {
+    @media (max-width: 992px) {
       flex-wrap: wrap;
-      gap: 20px;
-      justify-content: space-around;
-
-      .summary-item {
-        max-width: 150px;
-
-        .summary-value {
-          font-size: 24px;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .investment-table {
-    padding: 16px 0;
-
-    .container {
-      padding: 0 20px;
-    }
-
-    .investment-header {
-      flex-direction: column;
-      gap: 16px;
-      align-items: flex-start;
-
-      .investment-title {
-        font-size: 20px;
-      }
-    }
-
-    .portfolio-summary {
-      flex-direction: column;
-      align-items: stretch;
-      gap: 16px;
       height: auto;
-      padding: 16px 0;
+      gap: 20px;
 
       .summary-item {
-        max-width: none;
         text-align: center;
+        min-width: calc(50% - 10px);
 
         .summary-value {
           font-size: 24px;
@@ -381,90 +143,14 @@
       }
     }
 
-    .investment-data {
-      .table-header-row {
-        display: none; // Hide headers on mobile, show labels inline
-      }
-
-      .company-row {
-        flex-direction: column;
-        gap: 16px;
-        padding: 16px;
-        align-items: stretch;
-
-        .company-cell {
-          justify-content: center;
-          text-align: center;
-
-          .company-info {
-            width: auto;
-          }
-        }
-
-        .company-data {
-          flex-direction: column;
-          gap: 12px;
-
-          .data-cell {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 8px 0;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            width: 100%;
-
-            &:before {
-              content: attr(data-label);
-              font-weight: 500;
-              color: #555;
-              font-size: 12px;
-              text-transform: uppercase;
-            }
-
-            &.weight-cell {
-              flex-direction: column;
-              align-items: flex-end;
-              gap: 8px;
-
-              .weight-progress {
-                width: 100%;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 480px) {
-  .investment-table {
-    .company-row {
-      .company-cell {
-        flex-direction: column;
-        text-align: center;
-        gap: 12px;
-
-        .company-logo {
-          width: 40px;
-          height: 40px;
-
-          img {
-            max-width: 24px;
-            max-height: 24px;
-          }
-        }
-
-        .company-info {
-          .company-name {
-            font-size: 16px;
-          }
-        }
-      }
-    }
-
-    .portfolio-summary {
+    @media (max-width: 768px) {
+      flex-direction: column;
+      
       .summary-item {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+
         .summary-value {
           font-size: 20px;
         }
@@ -475,4 +161,339 @@
       }
     }
   }
+
+  // Investment Data Table Styles
+  .investment-data {
+    background-color: #f3f5f7;
+
+    .table {
+      width: 100%;
+      table-layout: fixed;
+      border-collapse: separate;
+      border-spacing: 0 8px;
+      margin-bottom: 0;
+
+      // Table Headers
+      thead .table-header-row {
+        th {
+          color: #313131;
+          font-family: 'Instrument Sans', -apple-system, Roboto, Helvetica, sans-serif;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 1.5;
+          border: none;
+          background: transparent;
+          padding: 0;
+          vertical-align: bottom;
+          position: relative;
+
+          svg {
+            width: 16px;
+            height: 16px;
+            margin-left: 5px;
+          }
+
+          &.company-industry-header {
+            width: 215px;
+          }
+
+          &.table-header-cell {
+            width: 86px;
+            text-align: left;
+          }
+        }
+      }
+
+      // Table Body Rows
+      tbody tr.company-row {
+        td {
+          background-color: #e7ebee;
+          border: none;
+          padding: 14px 26px;
+          vertical-align: middle;
+          
+          &:first-child {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+
+          &:last-child {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+        }
+
+        .company-cell {
+          width: 215px;
+          padding: 14px 26px;
+
+          .company-logo {
+            width: 61px;
+            height: 61px;
+            background-color: #122c3f;
+            border-radius: 0;
+            flex-shrink: 0;
+
+            img {
+              max-width: 42px;
+              max-height: 42px;
+              mix-blend-mode: luminosity;
+              filter: brightness(0) invert(1);
+            }
+          }
+
+          .company-info {
+            width: 224px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 4px;
+
+            .company-name {
+              width: 222px;
+              color: #000;
+              font-family: 'Victor Serif Trial', -apple-system, Roboto, Helvetica, sans-serif;
+              font-size: 20px;
+              font-weight: 500;
+              line-height: 1.5;
+              word-wrap: break-word;
+              overflow-wrap: break-word;
+              hyphens: auto;
+            }
+          }
+        }
+
+        .data-cell {
+          width: 86px;
+          color: #000;
+          font-family: 'Instrument Sans', -apple-system, Roboto, Helvetica, sans-serif;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 1.5;
+          padding: 14px 8px; // Reduced padding to accommodate 70px gap
+        }
+
+        .weight-cell {
+          width: 86px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 6px;
+          padding: 14px 26px !important;
+
+          .weight-text {
+            color: #000;
+            font-family: 'Instrument Sans', -apple-system, Roboto, Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.1;
+          }
+
+          .progress {
+            width: 86px;
+            height: 13px;
+            background-color: #d0d3d6;
+            border-radius: 0;
+            opacity: 0.9;
+
+            .progress-bar {
+              background-color: #122c3f;
+              border-radius: 0;
+              opacity: 0.9;
+              transition: width 0.3s ease;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Responsive Design
+  @media (max-width: 1200px) {
+    .investment-data .table {
+      thead .table-header-row th {
+        &.company-industry-header {
+          width: 200px;
+        }
+
+        &.table-header-cell {
+          width: 80px;
+        }
+      }
+
+      tbody tr.company-row {
+        .company-cell {
+          width: 200px;
+
+          .company-logo {
+            width: 50px;
+            height: 50px;
+
+            img {
+              max-width: 30px;
+              max-height: 30px;
+            }
+          }
+
+          .company-info .company-name {
+            width: 180px;
+            font-size: 18px;
+          }
+        }
+
+        .data-cell, .weight-cell {
+          width: 80px;
+          font-size: 14px;
+        }
+
+        .weight-cell .progress {
+          width: 80px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    .investment-data {
+      .table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        
+        thead, tbody, th, td, tr {
+          display: block;
+        }
+
+        thead tr {
+          position: absolute;
+          top: -9999px;
+          left: -9999px;
+        }
+
+        tbody tr.company-row {
+          border: 1px solid #ccc;
+          margin-bottom: 10px;
+          padding: 0;
+
+          td {
+            border: none;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding: 8px 15px 8px 50% !important;
+            text-align: left;
+            white-space: normal;
+            background-color: #e7ebee;
+            
+            &:before {
+              content: attr(data-label);
+              position: absolute;
+              left: 6px;
+              width: 45%;
+              padding-right: 10px;
+              white-space: nowrap;
+              font-weight: bold;
+              color: #555;
+              font-size: 12px;
+              text-transform: uppercase;
+            }
+
+            &.company-cell {
+              padding: 15px !important;
+              text-align: center;
+
+              &:before {
+                display: none;
+              }
+            }
+
+            &.weight-cell {
+              .progress {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    padding: 16px 0;
+
+    .investment-header {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 16px;
+    }
+
+    .investment-data .table tbody tr.company-row {
+      .company-cell {
+        .company-logo {
+          width: 40px;
+          height: 40px;
+
+          img {
+            max-width: 24px;
+            max-height: 24px;
+          }
+        }
+
+        .company-info .company-name {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+// Accessibility improvements
+.investment-table {
+  // Focus styles
+  .btn:focus,
+  .investment-sort:focus {
+    outline: 2px solid #005fcc;
+    outline-offset: 2px;
+  }
+
+  // Screen reader only content
+  .visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+
+  // High contrast mode support
+  @media (prefers-contrast: high) {
+    .company-logo {
+      border: 2px solid;
+    }
+
+    .progress {
+      border: 1px solid;
+    }
+
+    .company-row {
+      border: 1px solid;
+    }
+  }
+
+  // Reduced motion support
+  @media (prefers-reduced-motion: reduce) {
+    .progress-bar {
+      transition: none;
+    }
+  }
+}
+
+.border-right{
+  border-right: 1px solid #CBCBCB;
+  padding-right: 14px;
+}
+.float-right{
+  float: right;
 }
