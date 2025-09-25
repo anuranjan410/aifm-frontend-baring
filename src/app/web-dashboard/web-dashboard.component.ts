@@ -11,6 +11,7 @@ import { DocumentsPreviewComponent } from './components/documents-preview/docume
 import { InsightsComponent } from './components/insights/insights.component';
 import { NewsletterComponent } from '../shared/components/newsletter/newsletter.component';
 import { FooterComponent } from '../shared/components/footer/footer.component';
+import { InvestmentTableComponent } from '../web-portfolio/components/investment-table/investment-table.component';
 
 @Component({
   selector: 'app-web-dashboard',
@@ -23,7 +24,7 @@ import { FooterComponent } from '../shared/components/footer/footer.component';
     OverviewComponent,
     PerformanceComponent,
     OnlineSeminarComponent,
-    DistributionChartComponent,
+    InvestmentTableComponent,
     DocumentsPreviewComponent,
     InsightsComponent,
     NewsletterComponent,
