@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [FormsModule],
   templateUrl: './newsletter.component.html',
+  styleUrls: ['./newsletter.component.scss']
 })
 export class NewsletterComponent {
   email: string = '';
