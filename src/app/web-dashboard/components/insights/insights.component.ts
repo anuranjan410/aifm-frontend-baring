@@ -14,6 +14,10 @@ export class InsightsComponent {
     console.log('Navigate to insights page');
   }
 
+  onSummarizeInsights() {
+    console.log('Summarize insights');
+  }
+
   onReadInsight(type: string) {
     console.log('Read insight:', type);
   }
