@@ -5,7 +5,12 @@
   <main class="portfolio-content bg-light">
     <div class="container">
       <app-portfolio-overview></app-portfolio-overview>
-      <app-investment-table></app-investment-table>
+      <app-investment-table
+        [showHeader]="true"
+        [showPortfolioSummary]="true"
+        [showStaticContent]="false"
+        [containerClass]="'container-fluid'"
+      ></app-investment-table>
       <app-distribution-chart></app-distribution-chart>
     </div>
   </main>

@@ -22,17 +22,7 @@
       <div class="view-all-container">
         <button class="view-all-text" (click)="onViewAllDocuments()">View all documents</button>
         <button class="view-all-arrow" (click)="onViewAllDocuments()">
-          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0_9_138)">
-              <path d="M10.25 4.72656L18.125 12.6016L10.25 20.4766" stroke="white" stroke-width="1.56"
-                stroke-linecap="round" stroke-linejoin="round" />
-            </g>
-            <defs>
-              <clipPath id="clip0_9_138">
-                <rect width="25.2" height="25.2" fill="white" transform="translate(0.796875)" />
-              </clipPath>
-            </defs>
-          </svg>
+           <img src="./../../../assets/icons/CaretRightWhite.png" alt="View all documents" width="22" height="22">
         </button>
       </div>
     </div>
@@ -41,7 +31,7 @@
     <div class="documents-grid">
       <div class="document-card" *ngFor="let doc of documents; let i = index" [ngClass]="doc.type">
         <div class="document-overlay">
-          <div class="document-menu">
+          <!-- <div class="document-menu">
             <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M13 7.98438C13.5609 7.98438 14.0156 7.52966 14.0156 6.96875C14.0156 6.40784 13.5609 5.95312 13 5.95312C12.4391 5.95312 11.9844 6.40784 11.9844 6.96875C11.9844 7.52966 12.4391 7.98438 13 7.98438Z"
@@ -53,7 +43,7 @@
                 d="M13 20.0469C13.5609 20.0469 14.0156 19.5922 14.0156 19.0312C14.0156 18.4703 13.5609 18.0156 13 18.0156C12.4391 18.0156 11.9844 18.4703 11.9844 19.0312C11.9844 19.5922 12.4391 20.0469 13 20.0469Z"
                 fill="#F1EEEA" />
             </svg>
-          </div>
+          </div> -->
 
           <div class="document-content">
             <h4 class="document-title">{{ doc.title }}</h4>
@@ -62,7 +52,7 @@
 
           <div class="document-footer">
             <div class="document-file-info">
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_9_196)">
                   <path d="M18.5625 13.0625H15.8125V17.875" stroke="white" stroke-width="1.03125" stroke-linecap="round"
                     stroke-linejoin="round" />
@@ -85,13 +75,14 @@
                     <rect width="22" height="22" fill="white" />
                   </clipPath>
                 </defs>
-              </svg>
+              </svg> -->
+               <img src="./../../../assets/icons/FilePdf.png" alt="PDF File" width="22" height="22">
               <span class="file-size">{{ doc.size }}</span>
             </div>
 
             <div class="document-actions" *ngIf="doc.type !== 'report'">
               <button class="document-action" (click)="onViewDocument(doc)" title="View Document">
-                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_view)">
                     <path
                       d="M11 4.8125C4.125 4.8125 1.375 11 1.375 11C1.375 11 4.125 17.1875 11 17.1875C17.875 17.1875 20.625 11 20.625 11C20.625 11 17.875 4.8125 11 4.8125Z"
@@ -105,11 +96,12 @@
                       <rect width="22" height="22" fill="white" />
                     </clipPath>
                   </defs>
-                </svg>
+                </svg> -->
+                <img src="./../../../assets/icons/Eye.png" alt="PDF File" width="22" height="22">
               </button>
 
               <button class="document-action" (click)="onDownloadDocument(doc)" title="Download Document">
-                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_dl)">
                     <path d="M11 12.375V2.75" stroke="currentColor" stroke-width="1.03125" stroke-linecap="round"
                       stroke-linejoin="round" />
@@ -123,11 +115,12 @@
                       <rect width="22" height="22" fill="white" />
                     </clipPath>
                   </defs>
-                </svg>
+                </svg> -->
+                <img src="./../../../assets/icons/Download.png" alt="PDF File" width="22" height="22">
               </button>
 
               <button class="document-action" title="AI Summary">
-                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_ai)">
                     <path
                       d="M7.24174 14.7578L2.50744 13.0133C2.3769 12.9651 2.26426 12.8781 2.18471 12.7639C2.10515 12.6497 2.0625 12.5139 2.0625 12.3748C2.0625 12.2356 2.10515 12.0998 2.18471 11.9857C2.26426 11.8715 2.3769 11.7845 2.50744 11.7363L7.24174 9.99173L8.98627 5.25744C9.03445 5.1269 9.12149 5.01426 9.23566 4.93471C9.34982 4.85515 9.48563 4.8125 9.62478 4.8125C9.76393 4.8125 9.89974 4.85515 10.0139 4.93471C10.1281 5.01426 10.2151 5.1269 10.2633 5.25744L12.0078 9.99173L16.7421 11.7363C16.8727 11.7845 16.9853 11.8715 17.0649 11.9857C17.1444 12.0998 17.1871 12.2356 17.1871 12.3748C17.1871 12.5139 17.1444 12.6497 17.0649 12.7639C16.9853 12.8781 16.8727 12.9651 16.7421 13.0133L12.0078 14.7578L10.2633 19.4921C10.2151 19.6227 10.1281 19.7353 10.0139 19.8149C9.89974 19.8944 9.76393 19.9371 9.62478 19.9371C9.48563 19.9371 9.34982 19.8944 9.23566 19.8149C9.12149 19.7353 9.03445 19.6227 8.98627 19.4921L7.24174 14.7578Z"
@@ -146,11 +139,12 @@
                       <rect width="22" height="22" fill="white" />
                     </clipPath>
                   </defs>
-                </svg>
+                </svg> -->
+                 <img src="./../../../assets/icons/AI.png" alt="PDF File" width="22" height="22">
               </button>
             </div>
 
-            <div class="document-readmore" *ngIf="doc.type === 'report'">
+            <!-- <div class="document-readmore" *ngIf="doc.type === 'report'">
               <button class="readmore-text">Read More</button>
               <button class="readmore-arrow">
                 <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -165,11 +159,11 @@
                   </defs>
                 </svg>
               </button>
-            </div>
+            </div> -->
           </div>
         </div>
 
-        <img class="document-bg-image" [src]="doc.bgImage" alt="" />
+        <img class="document-bg-image" [src]="doc.bgImage" [alt]="doc?.title" />
       </div>
     </div>
   </div>
